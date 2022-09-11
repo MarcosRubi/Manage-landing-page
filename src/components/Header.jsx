@@ -73,7 +73,7 @@ function Header() {
     }, [entryObserver]);
 
     /* Agrega la clase visible si se muestra en el viewport */
-    let classNames = `menu container mx-auto ${visible}`;
+    let classNames = `menu ${visible}`;
 
     return (
         <header className={classNames} ref={headerRef}>

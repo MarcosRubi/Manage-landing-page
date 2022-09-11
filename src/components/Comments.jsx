@@ -66,7 +66,7 @@ function Comments() {
         observer.observe(commentsRef.current);
     }, [entryObserver]);
     return (
-        <section className="comments" ref={commentsRef}>
+        <section className="comments py-3" ref={commentsRef}>
             <h2 className={`text-center comment-title ${visible}`}>
                 What they've said
             </h2>

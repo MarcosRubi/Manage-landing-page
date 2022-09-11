@@ -48,10 +48,14 @@ function Footer() {
         const labelInput = document.querySelector(".input-group label");
         const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
+        if(input.value.trim() === ''){
+            input.classList.add("error");
+            labelInput.classList.add("error");
+            return;
+        }
         if (!regex.test(input.value)) {
             input.classList.add("error");
             labelInput.classList.add("error");
-            labelInput.innerHTML = "Updates in your inbox - Email no valid";
             return;
         }
         input.classList.remove("error");
